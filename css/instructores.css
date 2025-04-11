@@ -130,6 +130,15 @@ main {
   padding: 30px 5%;
 }
 
+hr {
+  border: 0;
+  height: 3px;
+  background: #691419;
+  width: 25%; /* Ajustar el ancho del divisor */
+  margin: 2rem auto; /* Centrando el divisor */
+  margin-top: 5px;
+}
+
 .instructor-profile {
   display: flex;
   margin-bottom: 50px;
@@ -421,8 +430,8 @@ main {
 }
 
 #custom-logo {
-  max-height: 80px;
-  max-width: 80px;
+  max-height: 100px;
+  max-width: 100px;
   /* You can adjust these values based on your logo size */
 }
 
