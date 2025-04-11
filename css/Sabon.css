@@ -1,0 +1,247 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+
+header {
+    background-color: #691419;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.instructor-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Foto del instructor */
+.instructor-photo-placeholder {
+    float: left;
+    width: 300px;
+    height: 300px;
+    background-color: #f0f0f0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cuando se reemplace el placeholder por una imagen real */
+.instructor-photo {
+    float: left;
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Sección de biografía */
+.bio {
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.bio p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Sección de logros */
+.achievements {
+    clear: both;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.achievements h2 {
+    color: #691419;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #691419;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.achievements ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.achievements li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* Galería de imágenes */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gallery .gallery-img-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cuando se reemplacen los placeholders por imágenes reales */
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery .gallery-img-placeholder:hover,
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para el botón de regreso */
+.back-button-container {
+    display: flex;
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #691419;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:hover {
+    background-color: #FFDC21;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.back-arrow {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* footer */
+
+.footer-bottom {
+  background-color: #691419;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: #d6d6d6;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #ffffff;
+}
+
+/* Logo styles */
+.newlogo {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#custom-logo {
+  max-height: 80px;
+  max-width: 80px;
+  /* You can adjust these values based on your logo size */
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .instructor-detail h1 {
+        font-size: 1.8rem;
+    }
+    
+    .instructor-photo-placeholder,
+    .instructor-photo {
+        float: none;
+        width: 100%;
+        height: 350px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .achievements {
+        padding: 15px;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .instructor-detail {
+        padding: 15px;
+    }
+    
+    .instructor-detail h1 {
+        font-size: 1.5rem;
+    }
+    
+    .instructor-photo-placeholder,
+    .instructor-photo {
+        height: 250px;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery .gallery-img-placeholder,
+    .gallery img {
+        height: 180px;
+    }
+}

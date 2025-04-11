@@ -1,0 +1,551 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header y Navegación */
+header {
+  width: 100%;
+  height: 70px; /* Altura fija para el navbar */
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.nav-menu a {
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  padding: 10px 0;
+  display: block;
+}
+
+.nav-menu a:hover {
+  color: #000000; /* Color rojo oscuro para el hover y activo */
+  border-bottom: 3px solid #ffdc21;
+}
+
+.nav-menu a.active {
+  columns: #691419;
+  border-bottom: 3px solid #691419; /* Color rojo oscuro para el hover y activo */
+}
+
+.nav-menu a.active {
+  border-bottom: 3px solid #8b0000;
+}
+
+/* Dropdown para Instructores */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 4px;
+  padding: 10px 0;
+}
+
+.dropdown-content li {
+  margin: 0;
+}
+
+.dropdown-content a {
+  padding: 10px 20px;
+  display: block;
+  font-weight: normal;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hamburger menu para móviles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+  background-color: #333;
+}
+
+/* Rangos Header Section */
+.rangos-header {
+  background-color: #f0f0f0;
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.rangos-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.rangos-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Rangos Section */
+.rangos-section {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.rangos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.rango-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.rango-card:hover {
+  transform: translateY(-10px);
+}
+
+.cinturon {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.grado {
+  position: absolute;
+  right: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.rango-content {
+  padding: 25px;
+  flex-grow: 1;
+}
+
+.rango-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.significado {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.rango-details p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+/* Colores de cinturones */
+.blanco {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+.blanco-amarillo {
+  background: linear-gradient(to right, #ffffff 80%, #ffd700 20%);
+  border: 1px solid #ddd;
+}
+
+.amarillo {
+  background-color: #ffd700;
+}
+
+.amarillo-verde {
+  background: linear-gradient(to right, #ffd700 80%, #008000 20%);
+}
+
+.verde {
+  background-color: #008000;
+}
+
+.verde-azul {
+  background: linear-gradient(to right, #008000 80%, #0000cd 20%);
+}
+
+.azul {
+  background-color: #0000cd;
+}
+
+.azul-rojo {
+  background: linear-gradient(to right, #0000cd 80%, #cc0000 20%);
+}
+
+.rojo {
+  background-color: #cc0000;
+}
+
+.rojo-negro {
+  background: linear-gradient(to right, #cc0000 80%, #000000 20%);
+}
+
+.negro {
+  background-color: #000000;
+  color: #fff;
+}
+
+.negro-card {
+  border: 2px solid #000;
+}
+
+/* Rangos Info Section */
+.rangos-info-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.rangos-info-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.info-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #8b0000;
+  padding-bottom: 10px;
+}
+
+.info-card p {
+  margin-bottom: 15px;
+}
+
+.info-card ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.info-card li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #202023;
+  color: #fff;
+  padding: 50px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.footer-logo,
+.footer-info,
+.footer-social {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-info h3,
+.footer-social h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.footer-info a:hover {
+  color: #af0202;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #8b0000;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom a:hover {
+  color: #af0202;
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 1024px) {
+  .rangos-header h1 {
+    font-size: 2.4rem;
+  }
+
+  .rangos-intro {
+    font-size: 1rem;
+  }
+
+  .rangos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar para tablets */
+  #navbar {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Dropdown en móvil */
+  .dropdown-content {
+    position: static;
+    display: none;
+    box-shadow: none;
+    min-width: 100%;
+    background-color: #f5f5f5;
+    margin-top: 10px;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+
+  /* Rangos header en tablets */
+  .rangos-header {
+    padding: 40px 0 30px;
+  }
+
+  .rangos-header h1 {
+    font-size: 2rem;
+  }
+
+  /* Rangos grid en tablets */
+  .rangos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Info grid en tablets */
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer en tablets */
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-logo,
+  .footer-info,
+  .footer-social {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para móviles */
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .rangos-header {
+    padding: 30px 0 20px;
+  }
+
+  .rangos-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .rangos-intro {
+    font-size: 0.9rem;
+  }
+
+  .rangos-section,
+  .rangos-info-section {
+    padding: 40px 0;
+  }
+
+  .rango-content {
+    padding: 20px;
+  }
+
+  .rango-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .significado,
+  .rango-details p {
+    font-size: 0.9rem;
+  }
+
+  .rangos-info-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .info-card {
+    padding: 20px;
+  }
+
+  .info-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .info-card p,
+  .info-card li {
+    font-size: 0.9rem;
+  }
+}
