@@ -65,4 +65,3 @@ Este proyecto está bajo la licencia [MIT](LICENSE).
 
 ---
 ¡Gracias por visitar nuestra página web y apoyar el Taekwondo ITF!
-```
