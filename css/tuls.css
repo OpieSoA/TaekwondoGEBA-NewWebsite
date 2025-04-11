@@ -323,6 +323,23 @@ header {
   margin-bottom: 8px;
 }
 
+/* Btn */
+
+.btn-more {
+  display: inline-block;
+  margin: 15 10px 10px;
+  padding: 5px 10px;
+  background-color: #8b0000;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-more:hover {
+  background-color: #ffdc21;
+  color: black;
+}
+
 /* Footer */
 footer {
   background-color: #202023;
