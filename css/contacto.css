@@ -321,10 +321,8 @@ footer {
   color: #af0202;
 }
 
-/* Media Queries para Responsive Design */
-
 @media (max-width: 768px) {
-  /* Navbar para tablets */
+  /* Navbar para tablets y móviles */
   #navbar {
     justify-content: space-between;
     padding: 0 20px;
@@ -342,7 +340,7 @@ footer {
     background-color: #fff;
     width: 100%;
     text-align: center;
-    transition: 0.3s;
+    transition: left 0.3s ease;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
     height: calc(100vh - 70px);
@@ -354,22 +352,9 @@ footer {
   }
 
   .nav-menu li {
-    margin: 10px 0;
+    margin: 5px 0; /* Reducir margen para evitar desbordes */
   }
 
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  /* Dropdown en móvil */
   .dropdown-content {
     position: static;
     display: none;
@@ -383,29 +368,30 @@ footer {
     display: block;
   }
 
-  /* Hero section en tablets */
-  .hero-section {
-    height: 70vh;
+  /* Hero section en móviles */
+  .hero {
+    padding-top: 90px; /* Ajustar según la altura del navbar */
+    text-align: center;
   }
 
-  .hero-title {
-    font-size: 2rem;
+  .hero h1 {
+    font-size: 1.8rem; /* Reducir tamaño de fuente */
   }
 
-  .hero-description {
+  .hero p {
     font-size: 1rem;
   }
 
-  /* Footer en tablets */
+  /* Footer en móviles */
   .footer-content {
     flex-direction: column;
+    text-align: center;
   }
 
   .footer-logo,
   .footer-info,
   .footer-social {
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 20px;
   }
 
   .social-icons {
