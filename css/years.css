@@ -144,10 +144,45 @@ header {
   text-align: center;
 }
 
-.years-header h1 {
-  font-size: 2rem;
+/* .years-header h1 {
+  font-size: 3rem;
   margin-bottom: 20px;
-  color: #691419;
+    --more: 3px;
+    --minus: calc(var(--more) * -1);
+    --border-color: #691419;
+  
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #ffdc21;
+    filter:
+      drop-shadow(var(--more) 0 0 var(--border-color))
+      drop-shadow(var(--minus) 0 0 var(--border-color))
+      drop-shadow(0 var(--more) 0 var(--border-color))
+      drop-shadow(0 var(--minus) 0 var(--border-color));
+  } */
+
+  .shadow-dance-text {
+    font-size: 4rem;
+    color: blue;
+    text-shadow: 5px 5px 0 #691419, 10px 10px 0 #ffdc21;
+    animation: shadow-dance 2s infinite;
+}
+
+@keyframes shadow-dance {
+    0%, 100% {
+        text-shadow: 5px 5px 0 red, 10px 10px 0 aqua;
+    }
+    50% {
+        text-shadow: -5px -5px 0 aqua, -10px -10px 0 red;
+    }
+}
+
+.years-header p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #8b0000;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Years Section */
