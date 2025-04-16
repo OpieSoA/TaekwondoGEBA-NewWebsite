@@ -221,6 +221,12 @@ hr {
   margin-top: 1rem;
 }
 
+.contact-info i {
+  color: #8b0000;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
 .contact-action {
   padding: 2rem;
   background-color: white;
@@ -292,13 +298,19 @@ footer {
   font-size: 1.3rem;
 }
 
-.footer-info a:hover {
-  color: #af0202;
+.footer-info i {
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
 .social-icons {
   display: flex;
   gap: 15px;
+}
+
+.social-icons i {
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
 .social-icon {
