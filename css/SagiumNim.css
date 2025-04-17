@@ -160,6 +160,13 @@ header {
     text-align: center;
 }
 
+.tournament-container i {
+    color: #b89f15;
+    font-size: 1.2rem;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+
 /* Estilos para el botón de regreso */
 .back-button-container {
     display: flex;
