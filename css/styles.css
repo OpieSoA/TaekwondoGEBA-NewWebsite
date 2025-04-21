@@ -76,7 +76,7 @@ header {
 
 .nav-menu a:hover {
   color: #000000; /* Color rojo oscuro para el hover y activo */
-  border-bottom: 3px solid #FFDC21;
+  border-bottom: 3px solid #ffdc21;
 }
 
 .nav-menu a.active {
@@ -186,8 +186,8 @@ header {
   border: 0;
   height: 4px;
   background: #691419;
-  width: 19%;  /* Ajustar el ancho del divisor */
-  margin: 2rem auto;  /* Centrando el divisor */
+  width: 19%; /* Ajustar el ancho del divisor */
+  margin: 2rem auto; /* Centrando el divisor */
 }
 
 .hero-title {
@@ -277,7 +277,7 @@ header {
 
 .principles-background {
   position: relative;
-  background-image: url('/css/images/2482.webp');
+  background-image: url("/css/images/2482.webp");
   background-size: cover;
   background-position: center;
   height: 800px;
@@ -337,47 +337,64 @@ header {
 
 /* Gallery Section */
 
-.image-gallery {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.image-gallery > div {
-  columns: 3;
-  gap: 1.25rem;
-  padding-top: 1.25rem;
-}
-.image-gallery img {
-  display: block;
+.carousel-section {
   width: 100%;
-  border-radius: 5px;
-  margin-bottom: 1.25rem;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
 }
 
-@media (max-width: 48rem) {
-  .image-gallery > div {
-    columns: 2;
-  }
+.carousel-container {
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  max-width: 1200px;
 }
 
-@media (max-width: 32rem) {
-  .image-gallery > div {
-    columns: 1;
-  }
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 1rem;
 }
 
-.gallery-row {
-  flex-direction: column;
-}
-
-.gallery-item {
+.carousel-img {
   width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  transition: transform 0.4s ease;
 }
 
-.small,
-.medium,
-.large {
-  min-height: 200px;
+.carousel-img:hover {
+  transform: scale(1.07);
+  z-index: 5;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 0.8rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
 }
 
 /* Footer */
@@ -526,6 +543,17 @@ footer {
     font-size: 1rem;
   }
 
+  /* Carrusel */
+
+  .carousel-img {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  .carousel-track {
+    gap: 0.5rem;
+  }
+
   /* Footer en tablets */
   .footer-content {
     flex-direction: column;
@@ -573,8 +601,7 @@ footer {
   }
 
   .why-train-section,
-  .principles-section,
-  .photo-grid-section {
+  .principles-section {
     padding: 50px 0;
   }
 
