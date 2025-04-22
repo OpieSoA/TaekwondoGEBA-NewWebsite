@@ -337,71 +337,58 @@ header {
 
 /* Gallery Section */
 
-.gallery-section {
+.galeria-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
   text-align: center;
-  margin-bottom: 2rem;
-  animation: fadeIn 1s ease-in-out;
 }
 
-.gallery-section h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.galeria-section h2 {
+  font-size: 2.5em;
   color: #8b0000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  margin-bottom: 10px;
 }
 
-.gallery-section p {
-  font-size: 1rem;
-  color: #8b0000;
-  font-style: bold;
-  margin-bottom: 2rem;
+.galeria-section p {
+  font-size: 1.2em;
+  color: #000;
+  margin-bottom: 40px;
 }
 
-.gallery-section .emoji {
-  font-size: 1.5rem;
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
 }
 
-/* Animación suave */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.carousel-section {
-  width: 100%;
-  padding: 2rem 0;
-  display: flex;
-  justify-content: center;
-}
-
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 300px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
+.galeria-grid img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-div.desc {
-  padding: 15px;
-  text-align: center;
+.galeria-grid img:hover {
+  transform: scale(1.05);
+}
+
+.btn-galeria {
+  display: inline-block;
+  background-color: #8b0000;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-galeria:hover {
+  background-color: #ff2525;
 }
 
 /* Footer */
@@ -564,6 +551,16 @@ footer {
 
   .social-icons {
     justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria-section h2 {
+    font-size: 2em;
+  }
+
+  .galeria-section p {
+    font-size: 1em;
   }
 }
 
