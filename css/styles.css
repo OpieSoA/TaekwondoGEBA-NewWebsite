@@ -392,8 +392,9 @@ header {
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease;
   gap: 1rem;
+  padding-right: 1rem;
 }
 
 .carousel-img {
@@ -597,7 +598,7 @@ footer {
   .gallery-section .emoji {
     font-size: 1.2rem;
   }
-  
+
   .carousel-img {
     max-width: 95%;
     margin: 0 auto;
@@ -684,5 +685,28 @@ footer {
   .btn-learn-more {
     padding: 10px 20px;
     font-size: 0.95rem;
+  }
+
+  .carousel-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .carousel-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 90%; /* Ajusta el ancho máximo */
+  }
+
+  .carousel-track {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .carousel-img {
+    margin: 0 auto;
+    max-width: 90%; /* Ajusta el tamaño de las imágenes */
   }
 }
