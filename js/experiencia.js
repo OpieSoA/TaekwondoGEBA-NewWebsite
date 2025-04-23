@@ -1,24 +1,39 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear();
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
 
-  // Inicio como practicante: 3 de abril de 2010
-  const startPractica = new Date("2010-04-03");
-  let yearsPractica = currentYear - startPractica.getFullYear();
+// === PROFESOR 1 ===
+// Clases desde 2005 (de 5 en 5)
+const yearsProfesor1ClaseRaw = currentYear - 2005;
+const yearsProfesor1Clase = Math.floor(yearsProfesor1ClaseRaw / 5) * 5;
+document.getElementById(
+  "profesor1-clase"
+).textContent = `${yearsProfesor1Clase}`;
 
-  // Si aún no llegó el 3 de abril este año, restamos 1
-  const thisYearAnniversary = new Date(currentYear, 3, 3); // Abril = 3 (base 0)
-  if (currentDate < thisYearAnniversary) {
-    yearsPractica--;
-  }
+// Práctica desde febrero de 1986 (de 5 en 5)
+let yearsProfesor1Practica = currentYear - 1986;
+if (currentDate.getMonth() < 1) {
+  // enero = 0, febrero = 1
+  yearsProfesor1Practica--;
+}
+yearsProfesor1Practica = Math.floor(yearsProfesor1Practica / 5) * 5;
+document.getElementById(
+  "profesor1-practica"
+).textContent = `más de ${yearsProfesor1Practica}`;
 
-  // Experiencia adicional desde 2005
-  const yearsAdicional = currentYear - 2005;
-  document.getElementById("years-adicional").textContent = yearsAdicional;
+// === PROFESOR 2 ===
+// Clases desde 2017 (normal)
+const yearsProfesor2Clase = currentYear - 2017;
+document.getElementById(
+  "profesor2-clase"
+).textContent = `${yearsProfesor2Clase}`;
 
-  // Inicio como profesor: 2017
-  const yearsProfesor = currentYear - 2017;
-
-  document.getElementById("years-practicante").textContent = yearsPractica;
-  document.getElementById("years-profesor").textContent = yearsProfesor;
-});
+// Práctica desde 3 abril 2010 (normal)
+let yearsProfesor2Practica = currentYear - 2010;
+const month = currentDate.getMonth(); // 0 = enero
+const day = currentDate.getDate();
+if (month < 3 || (month === 3 && day < 3)) {
+  yearsProfesor2Practica--;
+}
+document.getElementById(
+  "profesor2-practica"
+).textContent = `${yearsProfesor2Practica}`;
