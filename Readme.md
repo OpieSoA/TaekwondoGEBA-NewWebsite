@@ -14,6 +14,7 @@ El proyecto está organizado de la siguiente manera:
 │   ├── historia.css
 │   ├── instructores.css
 │   ├── que es.css
+│   ├── gallery.css
 │   ├── rangos.css
 │   ├── Sabon.css
 │   ├── SagiumNim.css
@@ -25,6 +26,7 @@ El proyecto está organizado de la siguiente manera:
 │   ├── historia.html
 │   ├── instructores.html
 │   ├── mas info.html
+│   ├── gallery.html
 │   ├── que es.html
 │   ├── rangos.html
 │   ├── Sabon.html
@@ -40,6 +42,7 @@ El proyecto está organizado de la siguiente manera:
 ## Características
 
 - **Página principal**: Introducción al Taekwondo GEBA y sus valores.
+- **Ver fotos**: Galeria con fotos de Clases y Eventos de TKD GEBA.
 - **Historia**: Información sobre el origen del Taekwondo y su llegada a Argentina.
 - **¿Qué es?**: Explicación sobre el Taekwondo ITF y sus principios.
 - **Clases**: Detalles sobre horarios, edades y ubicaciones de las clases.
