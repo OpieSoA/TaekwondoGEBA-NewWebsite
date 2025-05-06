@@ -224,6 +224,24 @@ header {
   font-size: 0.95rem;
 }
 
+.tul-btn {
+  display: inline-block;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding: 6px 12px;
+  background-color: #8b0000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.tul-btn:hover {
+  background-color: #ffdc21;
+  color: black;
+}
+
 /* Colores de cinturones */
 .blanco {
   background-color: #ffffff;
@@ -484,6 +502,14 @@ footer {
   /* Tuls grid en tablets */
   .tuls-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tul-btn {
+    display: block;
+    width: fit-content;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    font-size: 1rem;
   }
 
   /* Info grid en tablets */
