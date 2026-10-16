@@ -37,3 +37,15 @@ if (month < 3 || (month === 3 && day < 3)) {
 document.getElementById(
   "profesor2-practica"
 ).textContent = `${yearsProfesor2Practica}`;
+
+// === PROFESOR 3 ===
+// Clases desde 2021
+// setText("profesor3-clase", currentYear - 2021);
+// Práctica desde 2021
+// setText("profesor3-practica", currentYear - 2021);
+
+// === PROFESOR 4 ===
+// Clases desde 2024
+// setText("profesor4-clase", currentYear - 2024);
+// Práctica desde 2024
+// setText("profesor4-practica", currentYear - 2024);

@@ -206,17 +206,21 @@ hr {
 }
 
 .instructors-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  --gap: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: var(--gap);
+  margin-top: 30px;
   max-width: 850px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .instructor-card {
+  flex: 0 1 calc((100% - var(--gap)) / 2);
+  box-sizing: border-box;
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -249,6 +253,9 @@ hr {
 @media screen and (max-width: 768px) {
   .instructor-thumbnail {
       height: 220px;
+  }
+  .instructor-card {
+  flex-basis: 100%;
   }
 }
 
